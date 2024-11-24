@@ -11,17 +11,14 @@ Route::get('about', function () {
 });
 
 Route::get('mahasiswa', function () {
-    return view('mahasiswa');
+    $nim = [123,124,125,126];
+    $nama = ['rosita','yayi','najwa', 'tri'];
+    $jumlah = count($nim);
+    return view('mahasiswa', compact ('nim', 'jumlah', 'nama'));
 });
 
 Route::get('profile', function () {
     $nama = 'rosita';
     // return view('profile, compact(''nama));
     return view('profile') ->with('nama', $nama);
-});
-
-Route::get('array', function () {
-  for ( $i=1; $i <= 5; $i++) {
-    echo 'Hello World '  . $i . 'x<br>';
-  }
 });

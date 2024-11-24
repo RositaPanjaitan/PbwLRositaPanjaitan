@@ -47,29 +47,24 @@
           <th> NIM</th>
           <th>Nama Mahasiswa</th>
           <th>Jenis Kelamin</th>
-          <th  colspan="2">TTL</th>
+          <th colspan="2">TTL</th>
         </tr>
       </thead>
       <tbody>
+        <?php $nilai_awal = 0; ?>
+        @while ($nilai_awal < $jumlah)
+     
         <tr>
-          <td>0702222053</td>
-          <td>Rosita Panjaitan</td>
+          <td>{{$nim[$nilai_awal]}}</td>
+          <td>{{$nama[$nilai_awal]}}</td>
           <td>Perempuan</td>
           <td>06-11-2004</td>
-          <td rowspan="3">Kota Medan</td>
+          <td>Kota Medan</td>
         </tr>
-        <tr>
-          <td>07022</td>
-          <td>Yayi Naulia Silalahi</td>
-          <td>Perempuan</td>
-          <td>23-01-2004</td>
-        </tr>
-        <tr>
-          <td>070225</td>
-          <td>Najwa Fadhiyah Nasution</td>
-          <td>Perempuan</td>
-          <td>30-12-2004</td>
-        </tr>
+
+        <?php $nilai_awal++ ?>
+        @endwhile
+
       </tbody>
     </table>
 </div>
